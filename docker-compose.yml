@@ -6,10 +6,10 @@ services:
         container_name: nextcloud-db
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: ^gBMajgSS@
+            MYSQL_ROOT_PASSWORD: <yourpass>
             MYSQL_DATABASE: nextcloud
-            MYSQL_USER: admin
-            MYSQL_PASSWORD: 632552
+            MYSQL_USER: <yourname>
+            MYSQL_PASSWORD: <youruserpass>
         volumes:
             - ./cloud-data/db:/var/lib/mysql
 
@@ -22,8 +22,8 @@ services:
         environment:
             MYSQL_HOST: db
             MYSQL_DATABASE: nextcloud
-            MYSQL_USER: admin
-            MYSQL_PASSWORD: 632552
+            MYSQL_USER: <yourname>
+            MYSQL_PASSWORD: <youruserpass>
         volumes:
             - ./cloud-data/app:/var/www/html
         depends_on:
